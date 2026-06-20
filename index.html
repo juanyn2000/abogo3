@@ -199,7 +199,9 @@
         margin-bottom: 30px;
       }
 
-      /* Estilos adicionales para el dropdown */
+      /* ============================================ */
+      /* ESTILOS PARA DROPDOWN - CORREGIDOS           */
+      /* ============================================ */
       .dropdown:hover .dropdown-menu {
         display: block;
       }
@@ -209,18 +211,26 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         margin-top: 0;
+        padding: 0;
+        overflow: hidden;
       }
 
       .dropdown-item {
-        padding: 10px 20px;
+        padding: 12px 20px;
         color: #333;
         font-weight: 500;
         transition: all 0.3s ease;
+        background-color: #fff;
       }
 
       .dropdown-item:hover {
-        background-color: #2d4f2b;
-        color: white;
+        background-color: #2d4f2b !important;
+        color: #ffffff !important;
+      }
+
+      .dropdown-item:focus {
+        background-color: #2d4f2b !important;
+        color: #ffffff !important;
       }
 
       .nav-link.dropdown-toggle {
@@ -236,6 +246,154 @@
           margin-top: 0 !important;
           box-shadow: none !important;
           border: 1px solid #eee !important;
+        }
+
+        .dropdown-item:hover {
+          background-color: #2d4f2b !important;
+          color: #ffffff !important;
+        }
+      }
+
+      /* ============================================ */
+      /* ESTILOS PARA TESTIMONIOS CON ACORDEÓN         */
+      /* ============================================ */
+      .testimonials-section {
+        background-color: #f8f9fa;
+      }
+
+      .testimonials-section .section-title {
+        position: relative;
+        display: inline-block;
+        letter-spacing: 5px;
+        font-weight: 700;
+      }
+
+      .testimonials-section .section-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: #2d4f2b;
+        border-radius: 2px;
+      }
+
+      /* Tarjeta de testimonio */
+      .testimonial-card {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 20px 20px 10px 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-left: 4px solid #2d4f2b;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(45, 79, 43, 0.15);
+      }
+
+      /* Contenedor del texto */
+      .testimonial-text-wrapper {
+        position: relative;
+        flex-grow: 1;
+      }
+
+      .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #333;
+        font-style: italic;
+        margin: 0 0 5px 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        max-height: 80px;
+      }
+
+      .testimonial-text.expanded {
+        max-height: 1000px;
+      }
+
+      .testimonial-text::before {
+        content: '"';
+        font-size: 1.8rem;
+        color: #2d4f2b;
+        opacity: 0.5;
+        margin-right: 5px;
+        font-family: Georgia, serif;
+      }
+
+      .testimonial-text::after {
+        content: '"';
+        font-size: 1.8rem;
+        color: #2d4f2b;
+        opacity: 0.5;
+        margin-left: 5px;
+        font-family: Georgia, serif;
+      }
+
+      /* Botón "Ver más / Ver menos" */
+      .testimonial-toggle-btn {
+        background: none;
+        border: none;
+        color: #2d4f2b;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        padding: 8px 0 4px 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: color 0.3s ease;
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .testimonial-toggle-btn:hover {
+        color: #1f371d;
+      }
+
+      .testimonial-toggle-btn i {
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+      }
+
+      .testimonial-toggle-btn i.rotated {
+        transform: rotate(180deg);
+      }
+
+      /* Autor */
+      .testimonial-author {
+        font-weight: 600;
+        color: #2d4f2b;
+        font-size: 1rem;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+        margin-top: 8px;
+        text-align: right;
+      }
+
+      .testimonial-author i {
+        margin-right: 8px;
+        color: #2d4f2b;
+        opacity: 0.6;
+      }
+
+      @media (max-width: 767px) {
+        .testimonial-card {
+          padding: 18px 15px 8px 15px;
+        }
+        .testimonial-text {
+          font-size: 0.9rem;
+          max-height: 70px;
+        }
+        .testimonial-text.expanded {
+          max-height: 1000px;
         }
       }
     </style>
@@ -266,16 +424,12 @@
           </div>
           <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
-              <!-- <a class="text-primary px-3" href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a> -->
-              <!-- <a class="text-primary px-3" href="#">
-                <i class="fab fa-twitter"></i>
-              </a> -->
-              <a class="text-primary px-3" href="#">
-                <!-- <i class="fa-brands fa-tiktok"></i> -->
-              </a>
-              <a class="text-primary px-3" href="#">
+              <a class="text-primary px-3" href="#"></a>
+              <a
+                class="text-primary px-3"
+                href="https://www.linkedin.com/in/francisco-contreras-01b49419a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+              >
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a
@@ -285,7 +439,11 @@
               >
                 <i class="fab fa-instagram"></i>
               </a>
-              <a class="text-primary pl-3" href="#">
+              <a
+                class="text-primary pl-3"
+                href="https://youtube.com/@abogo.asesorialegal?si=z1u47zcEpfppQ6YJ"
+                target="_blank"
+              >
                 <i class="fab fa-youtube"></i>
               </a>
             </div>
@@ -323,7 +481,6 @@
           >
             <div class="navbar-nav ml-auto py-0">
               <a href="index.html" class="nav-item nav-link active">Inicio</a>
-              <!-- <a href="about.html" class="nav-item nav-link">Quienes Somos</a> -->
 
               <div class="nav-item dropdown">
                 <a
@@ -394,11 +551,8 @@
                   >
                 </div>
               </div>
-              <!-- <a href="familia.html" class="nav-item nav-link">Familia</a> -->
 
-              <a href="civil.html   " class="nav-item nav-link"
-                >Materia Civil</a
-              >
+              <a href="civil.html" class="nav-item nav-link">Materia Civil</a>
               <a href="otrasmaterias.html" class="nav-item nav-link"
                 >Otras Materias</a
               >
@@ -406,7 +560,6 @@
                 >Preguntas Frecuentes</a
               >
               <a href="contact.html" class="nav-item nav-link">Contacto</a>
-              <!-- Menú desplegable de Servicios CORREGIDO -->
             </div>
           </div>
         </nav>
@@ -547,47 +700,6 @@
     <!-- Booking End -->
 
     <!-- About Start -->
-    <!-- <div class="container-fluid py-5">
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-lg-6" style="min-height: 500px">
-            <div class="position-relative h-100">
-              <img
-                class="position-absolute w-100 h-100"
-                src="img/about.png"
-                style="object-fit: cover"
-              />
-            </div>
-          </div>
-          <div class="col-lg-6 pt-5 pb-lg-5">
-            <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-              <h6
-                class="text-primary text-uppercase"
-                style="letter-spacing: 5px"
-              >
-                ¿Quién soy?
-              </h6>
-              <h1 class="mb-3">Francisco Contreras Reyes</h1>
-              <p>
-                Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam
-                dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr
-                stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat
-                sed diam duo
-              </p>
-              <div class="row mb-4">
-                <div class="col-6">
-                  <img class="img-fluid" src="img/about-1.png" alt="" />
-                </div>
-                <div class="col-6">
-                  <img class="img-fluid" src="img/about-2.png" alt="" />
-                </div>
-              </div>
-              <a href="" class="btn btn-primary mt-1">Hablemos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="container-fluid py-5">
       <div class="container pt-5">
         <div class="row">
@@ -608,8 +720,6 @@
               >
                 ¿Quienes somos?
               </h2>
-              <!-- <h1 class="mb-3">Francisco Contreras R.</h1> -->
-              <p class="text-justify"></p>
               <p>
                 En Abogo, a través de su fundador don Francisco Contreras R.
                 estamos dispuestos en escuchar tu caso, con una atención
@@ -648,6 +758,126 @@
     </div>
     <!-- About End -->
 
+    <!-- ============================================ -->
+    <!-- TESTIMONIOS CON ACORDEÓN                      -->
+    <!-- ============================================ -->
+    <div class="container-fluid testimonials-section py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="section-title text-primary text-uppercase">Testimonios</h2>
+          <p class="text-muted mt-4" style="max-width: 600px; margin: 0 auto">
+            Lo que nuestros clientes dicen sobre nosotros
+          </p>
+        </div>
+        <div class="row">
+          <!-- Testimonio 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text-wrapper">
+                <p class="testimonial-text" id="testimonial-text-1">
+                  Buenos días, quisiera comentar y agradecer el trabajo eficiente y rápido que realizó el abogado Francisco Contreras sobre el reconocimiento de mi hijo. Todo salió muy bien y, repito, todo esto fue muy expedito, sin tanto trámite. Valió la pena su trabajo y, por supuesto, 100% recomendable.
+                </p>
+                <button class="testimonial-toggle-btn" data-target="testimonial-text-1">
+                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
+                </button>
+              </div>
+              <div class="testimonial-author">
+                <i class="fas fa-user-circle"></i> José Garrido
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text-wrapper">
+                <p class="testimonial-text" id="testimonial-text-2">
+                  Tramité mi divorcio con Francisco y todo estuvo bien. Es rápido, es una persona confiable y responsable, así que agradecida de su trabajo.
+                </p>
+                <button class="testimonial-toggle-btn" data-target="testimonial-text-2">
+                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
+                </button>
+              </div>
+              <div class="testimonial-author">
+                <i class="fas fa-user-circle"></i> Ana Zúñiga
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 (LARGO) -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text-wrapper">
+                <p class="testimonial-text" id="testimonial-text-3">
+                  Quiero expresar mi agradecimiento al abogado Francisco Contreras por la excelente asesoría que me ha brindado durante este año, tanto en materias laborales y profesionales como en asuntos personales y familiares. Siempre ha demostrado un alto nivel de compromiso, conocimiento y disposición para orientar cada proceso de manera clara, eficiente y rápida, logrando resultados concretos sin generar trámites innecesarios. Valoro especialmente su profesionalismo, cercanía y capacidad para entregar soluciones oportunas, dando tranquilidad y confianza en cada gestión realizada. Sin duda, recomiendo sus servicios al 100%. Es un profesional serio, responsable y comprometido con sus clientes. Muchas gracias, Francisco, por todo tu apoyo.
+                </p>
+                <button class="testimonial-toggle-btn" data-target="testimonial-text-3">
+                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
+                </button>
+              </div>
+              <div class="testimonial-author">
+                <i class="fas fa-user-circle"></i> Román Ghirardelli
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 4 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text-wrapper">
+                <p class="testimonial-text" id="testimonial-text-4">
+                  Confianza total desde el primer momento. Me representaron en un caso de despido injustificado y todo salió muy bien.
+                </p>
+                <button class="testimonial-toggle-btn" data-target="testimonial-text-4">
+                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
+                </button>
+              </div>
+              <div class="testimonial-author">
+                <i class="fas fa-user-circle"></i> Patricia G.
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 5 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text-wrapper">
+                <p class="testimonial-text" id="testimonial-text-5">
+                  Muy profesionales y con un trato humano. Me ayudaron con la declaración de bien familiar; todo fue claro y sencillo.
+                </p>
+                <button class="testimonial-toggle-btn" data-target="testimonial-text-5">
+                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
+                </button>
+              </div>
+              <div class="testimonial-author">
+                <i class="fas fa-user-circle"></i> Jorge S.
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-text-wrapper">
+                <p class="testimonial-text" id="testimonial-text-6">
+                  Excelente servicio. Siempre me mantuvieron informado de cada paso en mi caso de alimentos. Muy recomendable.
+                </p>
+                <button class="testimonial-toggle-btn" data-target="testimonial-text-6">
+                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
+                </button>
+              </div>
+              <div class="testimonial-author">
+                <i class="fas fa-user-circle"></i> Marcela F.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================ -->
+    <!-- FIN TESTIMONIOS                               -->
+    <!-- ============================================ -->
+
     <!-- Footer Start -->
     <div
       class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5"
@@ -662,8 +892,8 @@
               </h1>
             </a>
             <p class="text-justify">
-              Valoramos la comunicación transparente,
-              los tiempos reales y el compromiso con nuestros clientes.
+              Valoramos la comunicación transparente, los tiempos reales y el
+              compromiso con nuestros clientes.
             </p>
             <h6
               class="text-white text-uppercase mt-4 mb-3"
@@ -672,19 +902,16 @@
               Síguenos
             </h6>
             <div class="d-flex justify-content-start">
-              <!-- <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                ><i class="fab fa-twitter"></i
-              ></a> -->
-              <!-- <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                ><i class="fab fa-facebook-f"></i
-              ></a> -->
-              <!-- <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                ><i class="fa-brands fa-tiktok"></i>
-              </a> -->
-              <a class="btn btn-outline-primary btn-square mr-2" href="#"
+              <a
+                class="btn btn-outline-primary btn-square mr-2"
+                href="https://youtube.com/@abogo.asesorialegal?si=z1u47zcEpfppQ6YJ"
+                target="_blank"
                 ><i class="fa-brands fa-square-youtube"></i
               ></a>
-              <a class="btn btn-outline-primary btn-square mr-2" href="#"
+              <a
+                class="btn btn-outline-primary btn-square mr-2"
+                href="https://www.linkedin.com/in/francisco-contreras-01b49419a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
               <a
@@ -695,9 +922,7 @@
               ></a>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-5">
-            
-          </div>
+          <div class="col-lg-3 col-md-6 mb-5"></div>
           <div class="col-lg-3 col-md-6 mb-5">
             <h5
               class="text-white text-uppercase mb-4"
@@ -706,20 +931,29 @@
               Enlaces
             </h5>
             <div class="d-flex flex-column justify-content-start">
-              <a class="text-white-50 mb-2" href="#"
+              <a class="text-white-50 mb-2" href="index.html"
                 ><i class="fa fa-angle-right mr-2"></i>Inicio</a
               >
               <a class="text-white-50 mb-2" href="#"
-                ><i class="fa fa-angle-right mr-2"></i>Quienes Somos</a
+                ><i class="fa fa-angle-right mr-2"></i>Materia Laboral</a
+              >
+              <a class="text-white-50 mb-2" href="peritaje.html"
+                ><i class="fa fa-angle-right mr-2"></i>Perito Laboral</a
               >
               <a class="text-white-50 mb-2" href="#"
-                ><i class="fa fa-angle-right mr-2"></i>Servicios</a
+                ><i class="fa fa-angle-right mr-2"></i>Materia de Familia</a
+              >
+              <a class="text-white-50 mb-2" href="civil.html"
+                ><i class="fa fa-angle-right mr-2"></i>Materia Civil</a
+              >
+              <a class="text-white-50 mb-2" href="otrasmaterias.html"
+                ><i class="fa fa-angle-right mr-2"></i>Otras Materias</a
+              >
+              <a class="text-white-50 mb-2" href="preguntas.html"
+                ><i class="fa fa-angle-right mr-2"></i>Preguntas Frecuentes</a
               >
               <a class="text-white-50 mb-2" href="contact.html"
                 ><i class="fa fa-angle-right mr-2"></i>Contacto</a
-              >
-              <a class="text-white-50 mb-2" href="#"
-                ><i class="fa fa-angle-right mr-2"></i>Preguntas frecuentes</a
               >
             </div>
           </div>
@@ -730,9 +964,8 @@
             >
               Contacto
             </h5>
-            <!-- <p><i class="fa fa-map-marker-alt mr-2"></i>siempre viva</p> -->
             <p><i class="fa fa-phone-alt mr-2"></i>+56 9 3613 3046</p>
-            <p><i class="fa fa-envelope mr-2"></i>info@abogo.com</p>
+            <p><i class="fa fa-envelope mr-2"></i>info@abogo.cl</p>
           </div>
         </div>
       </div>
@@ -756,6 +989,44 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+
+    <!-- ============================================ -->
+    <!-- SCRIPT PARA ACORDEÓN DE TESTIMONIOS           -->
+    <!-- ============================================ -->
+    <script>
+      // Esperar a que el DOM esté completamente cargado
+      document.addEventListener('DOMContentLoaded', function() {
+        // Seleccionar todos los botones de toggle
+        var toggleButtons = document.querySelectorAll('.testimonial-toggle-btn');
+
+        toggleButtons.forEach(function(button) {
+          button.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Obtener el ID del texto objetivo
+            var targetId = this.getAttribute('data-target');
+            var textElement = document.getElementById(targetId);
+            var icon = this.querySelector('i');
+            var span = this.querySelector('span');
+
+            if (!textElement) return;
+
+            // Alternar la clase 'expanded'
+            textElement.classList.toggle('expanded');
+
+            // Cambiar el texto del botón y rotar el ícono
+            if (textElement.classList.contains('expanded')) {
+              span.textContent = 'Ver menos';
+              icon.classList.add('rotated');
+            } else {
+              span.textContent = 'Ver más';
+              icon.classList.remove('rotated');
+            }
+          });
+        });
+      });
+    </script>
+    <!-- ============================================ -->
 
     <!-- Preguntas Frecuentes Javascript -->
     <script>

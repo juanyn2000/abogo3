@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>ABOGO</title>
+    <title>ABOGO - Auto Despido</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -19,7 +19,13 @@
 
     <!-- Font Awesome -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 4 CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
@@ -30,118 +36,21 @@
       rel="stylesheet"
     />
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-
-    <style>
-      /* Botón de WhatsApp */
-        .whatsapp-btn {
-            text-decoration: none;
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 120px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #128c7e;
-            transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            color: white;
-        }
-
-        /* Animación de pulso */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-        /* Fin boton de whatsapp */
-      /* Sobrescribir el color primary de Bootstrap con #2D4F2B */
-      .btn-primary,
-      .bg-primary {
-        background-color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-      }
-
-      .text-primary {
-        color: #2d4f2b !important;
-      }
-
-      .btn-primary:hover,
-      .btn-primary:focus {
-        background-color: #1f371d !important;
-        border-color: #172a16 !important;
-      }
-
-      .btn-outline-primary {
-        color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-      }
-
-      .btn-outline-primary:hover {
-        background-color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-        color: #fff !important;
-      }
-
-      /* Carousel controls */
-      .carousel-control-prev,
-      .carousel-control-next {
-        color: #2d4f2b !important;
-      }
-
-      /* Iconos dentro de botones primary */
-      .btn-primary i,
-      .bg-primary i {
-        color: inherit !important;
-      }
-
-      /* Para los elementos de selección */
-      .custom-select:focus {
-        border-color: #2d4f2b !important;
-        box-shadow: 0 0 0 0.2rem rgba(45, 79, 43, 0.25) !important;
-      }
-
-      /* Para los enlaces en hover */
-      a:hover {
-        color: #2d4f2b !important;
-      }
-
-      /* Para el borde superior en las cards */
-      .border-top {
-        border-top-color: rgba(45, 79, 43, 0.1) !important;
-      }
-    </style>
   </head>
 
   <body>
-
-      <!-- Botón de WhatsApp -->
-    <a href="https://wa.link/woiaem" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
+    <!-- Botón de WhatsApp -->
+    <a
+      href="https://wa.link/woiaem"
+      class="whatsapp-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- End whatsapp button -->
-     
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
       <div class="container">
@@ -155,13 +64,12 @@
           </div>
           <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
-              <a class="text-primary px-3" href="">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a class="text-primary px-3" href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a class="text-primary px-3" href="">
+              <a class="text-primary px-3" href="#"></a>
+              <a
+                class="text-primary px-3"
+                href="https://www.linkedin.com/in/francisco-contreras-01b49419a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+              >
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a
@@ -171,7 +79,11 @@
               >
                 <i class="fab fa-instagram"></i>
               </a>
-              <a class="text-primary pl-3" href="">
+              <a
+                class="text-primary pl-3"
+                href="https://youtube.com/@abogo.asesorialegal?si=z1u47zcEpfppQ6YJ"
+                target="_blank"
+              >
                 <i class="fab fa-youtube"></i>
               </a>
             </div>
@@ -181,7 +93,7 @@
     </div>
     <!-- Topbar End -->
 
-   <!-- Navbar Start -->
+    <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
       <div
         class="container-lg position-relative p-0 px-lg-3"
@@ -190,7 +102,7 @@
         <nav
           class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
         >
-          <a href="" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <h1 class="m-0 text-primary">
               <span class="text-dark">ABO</span>GO
             </h1>
@@ -208,61 +120,86 @@
             id="navbarCollapse"
           >
             <div class="navbar-nav ml-auto py-0">
-              <a href="index.html" class="nav-item nav-link active">Inicio</a>
-              <!-- <a href="about.html" class="nav-item nav-link">Quienes Somos</a> -->
-              
+              <a href="index.html" class="nav-item nav-link">Inicio</a>
+
               <div class="nav-item dropdown">
                 <a
                   href="#"
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle active"
                   data-toggle="dropdown"
                 >
-                 Materia<br> Laboral
+                  Materia <br />Laboral
                 </a>
                 <div class="dropdown-menu">
-                  <a href="accident.html" class="dropdown-item">Accidentes del trabajo</a>
-                  <a href="enfermedades.html" class="dropdown-item">Enfermedades profesionales </a>
-                  <a href="despidos.html" class="dropdown-item">Despidos injustificados</a>
-                  <a href="autodespido.html" class="dropdown-item">Auto despido </a>
+                  <a href="accident.html" class="dropdown-item"
+                    >Accidentes del trabajo</a
+                  >
+                  <a href="enfermedades.html" class="dropdown-item"
+                    >Enfermedades profesionales
+                  </a>
+                  <a href="despidos.html" class="dropdown-item"
+                    >Despidos injustificados</a
+                  >
+                  <a href="autodespido.html" class="dropdown-item"
+                    >Auto despido
+                  </a>
                   <a href="tutela.html" class="dropdown-item">Tutela laboral</a>
                 </div>
               </div>
-              <!-- <a href="laboral.html" class="nav-item nav-link">Laboral</a> -->
+              <a href="peritaje.html" class="nav-item nav-link"
+                >Perito Laboral</a
+              >
               <div class="nav-item dropdown">
                 <a
                   href="#"
                   class="nav-link dropdown-toggle"
                   data-toggle="dropdown"
                 >
-                  Materia de <br>Familia
+                  Materia de<br />
+                  Familia
                 </a>
                 <div class="dropdown-menu">
-                  <a href="solicitudp.html" class="dropdown-item">Solicitud de Pensión de Alimentos</a>
-                  <a href="pagop.html" class="dropdown-item">Cese del pago de la Pensión de Alimentos</a>
-                  <a href="aumentop.html" class="dropdown-item">Aumento de Pensión de Alimentos</a>
-                  <a href="rebajap.html" class="dropdown-item">Rebaja de Pensión de Alimentos</a>
-                  <a href="cumplimientop.html" class="dropdown-item">Cumplimiento de Pensión de Alimentos</a>
-                  <a href="regimenp.html" class="dropdown-item">Régimen de Relación Directa y Regular (Visitas)</a>
-                  <a href="divorciou.html" class="dropdown-item">Divorcio Unilateral</a>
-                  <a href="divorciom.html" class="dropdown-item">Divorcio de Mutuo Acuerdo</a>
-                  <a href="declaracionbienf.html" class="dropdown-item">Declaración de Bien Familiar</a>
-                  <a href="autorizacionsalidapais.html" class="dropdown-item">Autorización de Salida del País de menores</a>
-
-
-
-                  
+                  <a href="solicitudp.html" class="dropdown-item"
+                    >Solicitud de Pensión de Alimentos</a
+                  >
+                  <a href="pagop.html" class="dropdown-item"
+                    >Cese del pago de la Pensión de Alimentos</a
+                  >
+                  <a href="aumentop.html" class="dropdown-item"
+                    >Aumento de Pensión de Alimentos</a
+                  >
+                  <a href="rebajap.html" class="dropdown-item"
+                    >Rebaja de Pensión de Alimentos</a
+                  >
+                  <a href="cumplimientop.html" class="dropdown-item"
+                    >Cumplimiento de Pensión de Alimentos</a
+                  >
+                  <a href="regimenp.html" class="dropdown-item"
+                    >Régimen de Relación Directa y Regular (Visitas)</a
+                  >
+                  <a href="divorciou.html" class="dropdown-item"
+                    >Divorcio Unilateral</a
+                  >
+                  <a href="divorciom.html" class="dropdown-item"
+                    >Divorcio de Mutuo Acuerdo</a
+                  >
+                  <a href="declaracionbienf.html" class="dropdown-item"
+                    >Declaración de Bien Familiar</a
+                  >
+                  <a href="autorizacionsalidapais.html" class="dropdown-item"
+                    >Autorización de Salida del País de menores</a
+                  >
                 </div>
               </div>
-              <!-- <a href="familia.html" class="nav-item nav-link">Familia</a> -->
 
-
-
-              <a href="civil.html   " class="nav-item nav-link">Materia Civil</a>
-              <a href="otrasmaterias.html" class="nav-item nav-link">Otras Materias</a>
-              <a href="preguntas.html" class="nav-item nav-link">Preguntas Frecuentes</a>
+              <a href="civil.html" class="nav-item nav-link">Materia Civil</a>
+              <a href="otrasmaterias.html" class="nav-item nav-link"
+                >Otras Materias</a
+              >
+              <a href="preguntas.html" class="nav-item nav-link"
+                >Preguntas Frecuentes</a
+              >
               <a href="contact.html" class="nav-item nav-link">Contacto</a>
-              <!-- Menú desplegable de Servicios CORREGIDO -->
-              
             </div>
           </div>
         </nav>
@@ -270,150 +207,130 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Header Start -->
+    <!-- Page Header Start -->
     <div class="container-fluid page-header">
       <div class="container">
         <div
           class="d-flex flex-column align-items-center justify-content-center"
           style="min-height: 400px"
         >
-          <h3 class="display-4 text-white text-uppercase">Autodespido</h3>
+          <h3 class="display-4 text-white text-uppercase">Auto Despido</h3>
           <div class="d-inline-flex text-white">
             <p class="m-0 text-uppercase">
               <a class="text-white" href="">Materia Laboral</a>
             </p>
             <i class="fa fa-angle-double-right pt-1 px-3"></i>
-            <p class="m-0 text-uppercase">Autodespido</p>
+            <p class="m-0 text-uppercase">Auto Despido</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- Header End -->
+    <!-- Page Header End -->
 
-    <!-- Booking Start -->
-    <!-- <div class="container-fluid booking mt-5 pb-5">
-        <div class="container pb-5">
-            <div class="bg-light shadow" style="padding: 30px;">
-                <div class="row align-items-center" style="min-height: 60px;">
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Destination</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
-                    </div>
-                </div>
-            </div>
+    <!-- CONTENIDO ÚNICO DE LA PÁGINA - AQUÍ VA EL CUERPO -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Aquí irá el contenido principal de la página -->
+          </div>
         </div>
-    </div> -->
-    <!-- Booking End -->
-
-    <!-- Contact Start -->
-   
-    <!-- Contact End -->
+      </div>
+    </div>
+    <!-- FIN CONTENIDO ÚNICO -->
 
     <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px">
-    <div class="container pt-5">
+    <div
+      class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5"
+      style="margin-top: 90px"
+    >
+      <div class="container pt-5">
         <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="text-primary"><span class="text-white">ABO</span>GO</h1>
-                </a>
-                <p>
-                    Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore
-                    rebum lorem ipsum dolor. No sed vero lorem dolor dolor
-                </p>
-                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px">
-                    Síguenos
-                </h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                        ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                        ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                        ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                    <a
-                        class="btn btn-outline-primary btn-square"
-                        href="https://www.instagram.com/abogo.cl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        target="_blank"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <a href="index.html" class="navbar-brand">
+              <h1 class="text-primary">
+                <span class="text-white">ABO</span>GO
+              </h1>
+            </a>
+            <p class="text-justify">
+              Valoramos la comunicación transparente, los tiempos reales y el
+              compromiso con nuestros clientes.
+            </p>
+            <h6
+              class="text-white text-uppercase mt-4 mb-3"
+              style="letter-spacing: 5px"
+            >
+              Síguenos
+            </h6>
+            <div class="d-flex justify-content-start">
+              <a
+                class="btn btn-outline-primary btn-square mr-2"
+                href="https://youtube.com/@abogo.asesorialegal?si=z1u47zcEpfppQ6YJ"
+                target="_blank"
+                ><i class="fa-brands fa-square-youtube"></i
+              ></a>
+              <a
+                class="btn btn-outline-primary btn-square mr-2"
+                href="https://www.linkedin.com/in/francisco-contreras-01b49419a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                class="btn btn-outline-primary btn-square"
+                href="https://www.instagram.com/abogo.cl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5"></div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h5
+              class="text-white text-uppercase mb-4"
+              style="letter-spacing: 5px"
+            >
+              Enlaces
+            </h5>
+            <div class="d-flex flex-column justify-content-start">
+              <a class="text-white-50 mb-2" href="index.html"
+                ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+              >
+              <a class="text-white-50 mb-2" href="#"
+                ><i class="fa fa-angle-right mr-2"></i>Materia Laboral</a
+              >
+              <a class="text-white-50 mb-2" href="peritaje.html"
+                ><i class="fa fa-angle-right mr-2"></i>Perito Laboral</a
+              >
+              <a class="text-white-50 mb-2" href="#"
+                ><i class="fa fa-angle-right mr-2"></i>Materia de Familia</a
+              >
+              <a class="text-white-50 mb-2" href="civil.html"
+                ><i class="fa fa-angle-right mr-2"></i>Materia Civil</a
+              >
+              <a class="text-white-50 mb-2" href="otrasmaterias.html"
+                ><i class="fa fa-angle-right mr-2"></i>Otras Materias</a
+              >
+              <a class="text-white-50 mb-2" href="preguntas.html"
+                ><i class="fa fa-angle-right mr-2"></i>Preguntas Frecuentes</a
+              >
+              <a class="text-white-50 mb-2" href="contact.html"
+                ><i class="fa fa-angle-right mr-2"></i>Contacto</a
+              >
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px">
-                    Enlaces
-                </h5>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"
-                        ><i class="fa fa-angle-right mr-2"></i>Inicio</a
-                    >
-                    <a class="text-white-50 mb-2" href="#"
-                        ><i class="fa fa-angle-right mr-2"></i>Quienes Somos</a
-                    >
-                    <a class="text-white-50 mb-2" href="#"
-                        ><i class="fa fa-angle-right mr-2"></i>Servicios</a
-                    >
-                    <a class="text-white-50 mb-2" href="contact.html"
-                        ><i class="fa fa-angle-right mr-2"></i>Contacto</a
-                    >
-                    <a class="text-white-50 mb-2" href="#"
-                        ><i class="fa fa-angle-right mr-2"></i>Preguntas frecuentes</a
-                    >
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px">
-                    Contacto
-                </h5>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>siempre viva</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+56 9 3613 3046</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@abogo.com</p>
-            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+            <h5
+              class="text-white text-uppercase mb-4"
+              style="letter-spacing: 5px"
+            >
+              Contacto
+            </h5>
+            <p><i class="fa fa-phone-alt mr-2"></i>+56 9 3613 3046</p>
+            <p><i class="fa fa-envelope mr-2"></i>info@abogo.cl</p>
+          </div>
         </div>
+      </div>
     </div>
-</div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
@@ -433,6 +350,9 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+
+    <!-- Custom Javascript -->
+    <script src="js/index.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

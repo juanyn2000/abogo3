@@ -36,367 +36,8 @@
       rel="stylesheet"
     />
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-
-    <style>
-      /* Sobrescribir el color primary de Bootstrap con #2D4F2B */
-      .btn-primary,
-      .bg-primary {
-        background-color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-      }
-
-      .text-primary {
-        color: #2d4f2b !important;
-      }
-
-      .btn-primary:hover,
-      .btn-primary:focus {
-        background-color: #1f371d !important;
-        border-color: #172a16 !important;
-      }
-
-      .btn-outline-primary {
-        color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-      }
-
-      .btn-outline-primary:hover {
-        background-color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-        color: #fff !important;
-      }
-
-      /* Carousel controls */
-      .carousel-control-prev,
-      .carousel-control-next {
-        color: #2d4f2b !important;
-      }
-
-      /* Iconos dentro de botones primary */
-      .btn-primary i,
-      .bg-primary i {
-        color: inherit !important;
-      }
-
-      /* Para los elementos de selección */
-      .custom-select:focus {
-        border-color: #2d4f2b !important;
-        box-shadow: 0 0 0 0.2rem rgba(45, 79, 43, 0.25) !important;
-      }
-
-      /* Para los enlaces en hover */
-      a:hover {
-        color: #2d4f2b !important;
-      }
-
-      /* Para el borde superior en las cards */
-      .border-top {
-        border-top-color: rgba(45, 79, 43, 0.1) !important;
-      }
-
-      /* Botón de WhatsApp */
-      .whatsapp-btn {
-        text-decoration: none;
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 120px;
-        right: 30px;
-        background-color: #25d366;
-        color: white;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        animation: pulse 2s infinite;
-      }
-
-      .whatsapp-btn:hover {
-        background-color: #128c7e;
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        color: white;
-      }
-
-      /* Animación de pulso */
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-        }
-        70% {
-          box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-        }
-      }
-      /* Fin boton de whatsapp */
-
-      /* Estilos para preguntas frecuentes */
-      .faq-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-      }
-
-      .faq-item {
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      .faq-question {
-        background-color: #2d4f2b;
-        color: white;
-        padding: 15px 20px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: bold;
-      }
-
-      .faq-question:hover {
-        background-color: #1f371d;
-      }
-
-      .faq-answer {
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition:
-          max-height 0.3s ease,
-          padding 0.3s ease;
-        background-color: #f9f9f9;
-      }
-
-      .faq-answer.active {
-        padding: 20px;
-        max-height: 500px;
-      }
-
-      .faq-icon {
-        font-size: 18px;
-        transition: transform 0.3s ease;
-      }
-
-      .faq-icon.rotated {
-        transform: rotate(45deg);
-      }
-
-      .faq-title {
-        text-align: center;
-        color: #2d4f2b;
-        margin-bottom: 30px;
-      }
-
-      /* ============================================ */
-      /* ESTILOS PARA DROPDOWN - CORREGIDOS           */
-      /* ============================================ */
-      .dropdown:hover .dropdown-menu {
-        display: block;
-      }
-
-      .dropdown-menu {
-        border: none;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        margin-top: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-
-      .dropdown-item {
-        padding: 12px 20px;
-        color: #333;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        background-color: #fff;
-      }
-
-      .dropdown-item:hover {
-        background-color: #2d4f2b !important;
-        color: #ffffff !important;
-      }
-
-      .dropdown-item:focus {
-        background-color: #2d4f2b !important;
-        color: #ffffff !important;
-      }
-
-      .nav-link.dropdown-toggle {
-        cursor: pointer;
-      }
-
-      /* Ajuste para el navbar en móviles */
-      @media (max-width: 991px) {
-        .dropdown-menu {
-          position: static !important;
-          float: none !important;
-          width: 100% !important;
-          margin-top: 0 !important;
-          box-shadow: none !important;
-          border: 1px solid #eee !important;
-        }
-
-        .dropdown-item:hover {
-          background-color: #2d4f2b !important;
-          color: #ffffff !important;
-        }
-      }
-
-      /* ============================================ */
-      /* ESTILOS PARA TESTIMONIOS CON ACORDEÓN         */
-      /* ============================================ */
-      .testimonials-section {
-        background-color: #f8f9fa;
-      }
-
-      .testimonials-section .section-title {
-        position: relative;
-        display: inline-block;
-        letter-spacing: 5px;
-        font-weight: 700;
-      }
-
-      .testimonials-section .section-title::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: -12px;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: #2d4f2b;
-        border-radius: 2px;
-      }
-
-      /* Tarjeta de testimonio */
-      .testimonial-card {
-        background: #ffffff;
-        border-radius: 8px;
-        padding: 20px 20px 10px 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-left: 4px solid #2d4f2b;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(45, 79, 43, 0.15);
-      }
-
-      /* Contenedor del texto */
-      .testimonial-text-wrapper {
-        position: relative;
-        flex-grow: 1;
-      }
-
-      .testimonial-text {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #333;
-        font-style: italic;
-        margin: 0 0 5px 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-        max-height: 80px;
-      }
-
-      .testimonial-text.expanded {
-        max-height: 1000px;
-      }
-
-      .testimonial-text::before {
-        content: '"';
-        font-size: 1.8rem;
-        color: #2d4f2b;
-        opacity: 0.5;
-        margin-right: 5px;
-        font-family: Georgia, serif;
-      }
-
-      .testimonial-text::after {
-        content: '"';
-        font-size: 1.8rem;
-        color: #2d4f2b;
-        opacity: 0.5;
-        margin-left: 5px;
-        font-family: Georgia, serif;
-      }
-
-      /* Botón "Ver más / Ver menos" */
-      .testimonial-toggle-btn {
-        background: none;
-        border: none;
-        color: #2d4f2b;
-        font-weight: 600;
-        font-size: 0.85rem;
-        cursor: pointer;
-        padding: 8px 0 4px 0;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: color 0.3s ease;
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .testimonial-toggle-btn:hover {
-        color: #1f371d;
-      }
-
-      .testimonial-toggle-btn i {
-        font-size: 0.75rem;
-        transition: transform 0.3s ease;
-      }
-
-      .testimonial-toggle-btn i.rotated {
-        transform: rotate(180deg);
-      }
-
-      /* Autor */
-      .testimonial-author {
-        font-weight: 600;
-        color: #2d4f2b;
-        font-size: 1rem;
-        border-top: 1px solid #eee;
-        padding-top: 10px;
-        margin-top: 8px;
-        text-align: right;
-      }
-
-      .testimonial-author i {
-        margin-right: 8px;
-        color: #2d4f2b;
-        opacity: 0.6;
-      }
-
-      @media (max-width: 767px) {
-        .testimonial-card {
-          padding: 18px 15px 8px 15px;
-        }
-        .testimonial-text {
-          font-size: 0.9rem;
-          max-height: 70px;
-        }
-        .testimonial-text.expanded {
-          max-height: 1000px;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -409,7 +50,6 @@
     >
       <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- End whatsapp button -->
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
@@ -462,7 +102,7 @@
         <nav
           class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
         >
-          <a href="" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <h1 class="m-0 text-primary">
               <span class="text-dark">ABO</span>GO
             </h1>
@@ -581,8 +221,8 @@
                 <h1 class="display-3 text-white mb-md-4">
                   Te ayudamos en tu proceso
                 </h1>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2"
-                  >Contactanos</a
+                <a href="contact.html" class="btn btn-primary py-md-3 px-md-5 mt-2"
+                  >Contáctanos</a
                 >
               </div>
             </div>
@@ -597,8 +237,8 @@
                 <h1 class="display-3 text-white mb-md-4">
                   Defendemos tus derechos
                 </h1>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2"
-                  >Contactanos</a
+                <a href="contact.html" class="btn btn-primary py-md-3 px-md-5 mt-2"
+                  >Contáctanos</a
                 >
               </div>
             </div>
@@ -627,69 +267,76 @@
     <!-- Carousel End -->
 
     <!-- Booking Start -->
-    <div class="container-fluid booking mt-5 pb-5 px-0">
+    <div class="container-fluid booking mt-5 pb-5 px-0 d-none d-md-block">
       <div class="container pb-5">
         <div class="row justify-content-center">
           <div class="col-12">
             <div class="bg-light shadow" style="padding: 30px 20px">
               <div class="row align-items-center" style="min-height: 60px">
                 <div class="col-12">
-                  <div class="row justify-content-center">
-                    <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="nombre"
-                          placeholder="Ingresa tu nombre"
-                          required
+                  <form action="https://formspree.io/f/xnjkapvl" method="POST">
+                    <div class="row justify-content-center">
+                      <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="nombre"
+                            id="nombre"
+                            placeholder="Ingresa tu nombre"
+                            required
+                            style="height: 47px"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            id="correo"
+                            placeholder="Ingresa tu correo"
+                            required
+                            style="height: 47px"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <select class="form-control" style="height: 47px" name="subject">
+                            <option selected value="">Especialidad</option>
+                            <option value="Familiar">Familiar</option>
+                            <option value="Laboral">Laboral</option>
+                            <option value="Civil">Civil</option>
+                            <option value="Otra Materia">Otra Materia</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <input
+                            type="tel"
+                            class="form-control"
+                            name="telefono"
+                            id="telefono"
+                            placeholder="+569"
+                            required
+                            style="height: 47px"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-sm-12 mt-3 mt-md-0">
+                        <button
+                          class="btn btn-primary btn-block"
+                          type="submit"
                           style="height: 47px"
-                        />
+                        >
+                          Enviar
+                        </button>
                       </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="correo"
-                          placeholder="Ingresa tu correo"
-                          required
-                          style="height: 47px"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <select class="form-control" style="height: 47px">
-                          <option selected>Especialidad</option>
-                          <option value="1">Familiar</option>
-                          <option value="2">Laboral</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <input
-                          type="tel"
-                          class="form-control"
-                          id="telefono"
-                          placeholder="+569"
-                          required
-                          style="height: 47px"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12 mt-3 mt-md-0">
-                      <button
-                        class="btn btn-primary btn-block"
-                        type="submit"
-                        style="height: 47px"
-                      >
-                        Enviar
-                      </button>
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -758,9 +405,7 @@
     </div>
     <!-- About End -->
 
-    <!-- ============================================ -->
-    <!-- TESTIMONIOS CON ACORDEÓN                      -->
-    <!-- ============================================ -->
+    <!-- Testimonios Start -->
     <div class="container-fluid testimonials-section py-5">
       <div class="container py-4">
         <div class="text-center mb-5">
@@ -775,9 +420,16 @@
             <div class="testimonial-card">
               <div class="testimonial-text-wrapper">
                 <p class="testimonial-text" id="testimonial-text-1">
-                  Buenos días, quisiera comentar y agradecer el trabajo eficiente y rápido que realizó el abogado Francisco Contreras sobre el reconocimiento de mi hijo. Todo salió muy bien y, repito, todo esto fue muy expedito, sin tanto trámite. Valió la pena su trabajo y, por supuesto, 100% recomendable.
+                  Buenos días, quisiera comentar y agradecer el trabajo
+                  eficiente y rápido que realizó el abogado Francisco Contreras
+                  sobre el reconocimiento de mi hijo. Todo salió muy bien y,
+                  repito, todo esto fue muy expedito, sin tanto trámite. Valió
+                  la pena su trabajo y, por supuesto, 100% recomendable.
                 </p>
-                <button class="testimonial-toggle-btn" data-target="testimonial-text-1">
+                <button
+                  class="testimonial-toggle-btn"
+                  data-target="testimonial-text-1"
+                >
                   <i class="fas fa-chevron-down"></i> <span>Ver más</span>
                 </button>
               </div>
@@ -792,9 +444,14 @@
             <div class="testimonial-card">
               <div class="testimonial-text-wrapper">
                 <p class="testimonial-text" id="testimonial-text-2">
-                  Tramité mi divorcio con Francisco y todo estuvo bien. Es rápido, es una persona confiable y responsable, así que agradecida de su trabajo.
+                  Tramité mi divorcio con Francisco y todo estuvo bien. Es
+                  rápido, es una persona confiable y responsable, así que
+                  agradecida de su trabajo.
                 </p>
-                <button class="testimonial-toggle-btn" data-target="testimonial-text-2">
+                <button
+                  class="testimonial-toggle-btn"
+                  data-target="testimonial-text-2"
+                >
                   <i class="fas fa-chevron-down"></i> <span>Ver más</span>
                 </button>
               </div>
@@ -804,14 +461,29 @@
             </div>
           </div>
 
-          <!-- Testimonio 3 (LARGO) -->
+          <!-- Testimonio 3 -->
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="testimonial-card">
               <div class="testimonial-text-wrapper">
                 <p class="testimonial-text" id="testimonial-text-3">
-                  Quiero expresar mi agradecimiento al abogado Francisco Contreras por la excelente asesoría que me ha brindado durante este año, tanto en materias laborales y profesionales como en asuntos personales y familiares. Siempre ha demostrado un alto nivel de compromiso, conocimiento y disposición para orientar cada proceso de manera clara, eficiente y rápida, logrando resultados concretos sin generar trámites innecesarios. Valoro especialmente su profesionalismo, cercanía y capacidad para entregar soluciones oportunas, dando tranquilidad y confianza en cada gestión realizada. Sin duda, recomiendo sus servicios al 100%. Es un profesional serio, responsable y comprometido con sus clientes. Muchas gracias, Francisco, por todo tu apoyo.
+                  Quiero expresar mi agradecimiento al abogado Francisco
+                  Contreras por la excelente asesoría que me ha brindado durante
+                  este año, tanto en materias laborales y profesionales como en
+                  asuntos personales y familiares. Siempre ha demostrado un alto
+                  nivel de compromiso, conocimiento y disposición para orientar
+                  cada proceso de manera clara, eficiente y rápida, logrando
+                  resultados concretos sin generar trámites innecesarios. Valoro
+                  especialmente su profesionalismo, cercanía y capacidad para
+                  entregar soluciones oportunas, dando tranquilidad y confianza
+                  en cada gestión realizada. Sin duda, recomiendo sus servicios
+                  al 100%. Es un profesional serio, responsable y comprometido
+                  con sus clientes. Muchas gracias, Francisco, por todo tu
+                  apoyo.
                 </p>
-                <button class="testimonial-toggle-btn" data-target="testimonial-text-3">
+                <button
+                  class="testimonial-toggle-btn"
+                  data-target="testimonial-text-3"
+                >
                   <i class="fas fa-chevron-down"></i> <span>Ver más</span>
                 </button>
               </div>
@@ -820,63 +492,10 @@
               </div>
             </div>
           </div>
-
-          <!-- Testimonio 4 -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="testimonial-card">
-              <div class="testimonial-text-wrapper">
-                <p class="testimonial-text" id="testimonial-text-4">
-                  Confianza total desde el primer momento. Me representaron en un caso de despido injustificado y todo salió muy bien.
-                </p>
-                <button class="testimonial-toggle-btn" data-target="testimonial-text-4">
-                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
-                </button>
-              </div>
-              <div class="testimonial-author">
-                <i class="fas fa-user-circle"></i> Patricia G.
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonio 5 -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="testimonial-card">
-              <div class="testimonial-text-wrapper">
-                <p class="testimonial-text" id="testimonial-text-5">
-                  Muy profesionales y con un trato humano. Me ayudaron con la declaración de bien familiar; todo fue claro y sencillo.
-                </p>
-                <button class="testimonial-toggle-btn" data-target="testimonial-text-5">
-                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
-                </button>
-              </div>
-              <div class="testimonial-author">
-                <i class="fas fa-user-circle"></i> Jorge S.
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonio 6 -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="testimonial-card">
-              <div class="testimonial-text-wrapper">
-                <p class="testimonial-text" id="testimonial-text-6">
-                  Excelente servicio. Siempre me mantuvieron informado de cada paso en mi caso de alimentos. Muy recomendable.
-                </p>
-                <button class="testimonial-toggle-btn" data-target="testimonial-text-6">
-                  <i class="fas fa-chevron-down"></i> <span>Ver más</span>
-                </button>
-              </div>
-              <div class="testimonial-author">
-                <i class="fas fa-user-circle"></i> Marcela F.
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <!-- ============================================ -->
-    <!-- FIN TESTIMONIOS                               -->
-    <!-- ============================================ -->
+    <!-- Testimonios End -->
 
     <!-- Footer Start -->
     <div
@@ -886,7 +505,7 @@
       <div class="container pt-5">
         <div class="row justify-content-center">
           <div class="col-lg-3 col-md-6 mb-5">
-            <a href="" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
               <h1 class="text-primary">
                 <span class="text-white">ABO</span>GO
               </h1>
@@ -986,93 +605,10 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- ============================================ -->
-    <!-- SCRIPT PARA ACORDEÓN DE TESTIMONIOS           -->
-    <!-- ============================================ -->
-    <script>
-      // Esperar a que el DOM esté completamente cargado
-      document.addEventListener('DOMContentLoaded', function() {
-        // Seleccionar todos los botones de toggle
-        var toggleButtons = document.querySelectorAll('.testimonial-toggle-btn');
-
-        toggleButtons.forEach(function(button) {
-          button.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // Obtener el ID del texto objetivo
-            var targetId = this.getAttribute('data-target');
-            var textElement = document.getElementById(targetId);
-            var icon = this.querySelector('i');
-            var span = this.querySelector('span');
-
-            if (!textElement) return;
-
-            // Alternar la clase 'expanded'
-            textElement.classList.toggle('expanded');
-
-            // Cambiar el texto del botón y rotar el ícono
-            if (textElement.classList.contains('expanded')) {
-              span.textContent = 'Ver menos';
-              icon.classList.add('rotated');
-            } else {
-              span.textContent = 'Ver más';
-              icon.classList.remove('rotated');
-            }
-          });
-        });
-      });
-    </script>
-    <!-- ============================================ -->
-
-    <!-- Preguntas Frecuentes Javascript -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqQuestions = document.querySelectorAll(".faq-question");
-
-        faqQuestions.forEach((question) => {
-          question.addEventListener("click", function () {
-            const answer = this.nextElementSibling;
-            const icon = this.querySelector(".faq-icon");
-
-            // Cerrar todas las demás respuestas
-            document.querySelectorAll(".faq-answer").forEach((otherAnswer) => {
-              if (otherAnswer !== answer) {
-                otherAnswer.classList.remove("active");
-                otherAnswer.previousElementSibling
-                  .querySelector(".faq-icon")
-                  .classList.remove("rotated");
-              }
-            });
-
-            // Alternar la respuesta actual
-            answer.classList.toggle("active");
-            icon.classList.toggle("rotated");
-          });
-        });
-      });
-    </script>
+    <!-- Custom Javascript -->
+    <script src="js/index.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-    <!-- Script adicional para asegurar el funcionamiento del dropdown -->
-    <script>
-      // Asegurar que el dropdown funcione correctamente en Bootstrap 4
-      $(document).ready(function () {
-        // Inicializar los dropdowns
-        $(".dropdown-toggle").dropdown();
-
-        // Asegurar que el dropdown se cierre al hacer clic fuera
-        $(document).on("click", function (e) {
-          if (!$(e.target).closest(".dropdown").length) {
-            $(".dropdown-menu").removeClass("show");
-          }
-        });
-      });
-    </script>
   </body>
 </html>

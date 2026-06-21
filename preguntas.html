@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>ABOGO</title>
+    <title>ABOGO - Preguntas Frecuentes</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -19,7 +19,13 @@
 
     <!-- Font Awesome -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 4 CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
@@ -30,166 +36,8 @@
       rel="stylesheet"
     />
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <style>
-      /* Sobrescribir el color primary de Bootstrap con #2D4F2B */
-      .btn-primary,
-      .bg-primary {
-        background-color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-      }
-
-      .text-primary {
-        color: #2d4f2b !important;
-      }
-
-      .btn-primary:hover,
-      .btn-primary:focus {
-        background-color: #1f371d !important;
-        border-color: #172a16 !important;
-      }
-
-      .btn-outline-primary {
-        color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-      }
-
-      .btn-outline-primary:hover {
-        background-color: #2d4f2b !important;
-        border-color: #2d4f2b !important;
-        color: #fff !important;
-      }
-
-      /* Carousel controls */
-      .carousel-control-prev,
-      .carousel-control-next {
-        color: #2d4f2b !important;
-      }
-
-      /* Iconos dentro de botones primary */
-      .btn-primary i,
-      .bg-primary i {
-        color: inherit !important;
-      }
-
-      /* Para los elementos de selección */
-      .custom-select:focus {
-        border-color: #2d4f2b !important;
-        box-shadow: 0 0 0 0.2rem rgba(45, 79, 43, 0.25) !important;
-      }
-
-      /* Para los enlaces en hover */
-      a:hover {
-        color: #2d4f2b !important;
-      }
-
-      /* Para el borde superior en las cards */
-      .border-top {
-        border-top-color: rgba(45, 79, 43, 0.1) !important;
-      }
-
-      .faq-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-      }
-
-      .faq-item {
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      .faq-question {
-        background-color: #2d4f2b;
-        color: white;
-        padding: 15px 20px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: bold;
-      }
-
-      .faq-question:hover {
-        background-color: #1f371d;
-      }
-
-      .faq-answer {
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition:
-          max-height 0.3s ease,
-          padding 0.3s ease;
-        background-color: #f9f9f9;
-      }
-
-      .faq-answer.active {
-        padding: 20px;
-        max-height: 500px;
-      }
-
-      .faq-icon {
-        font-size: 18px;
-        transition: transform 0.3s ease;
-      }
-
-      .faq-icon.rotated {
-        transform: rotate(45deg);
-      }
-
-      h2 {
-        text-align: center;
-        color: #2d4f2b;
-        margin-bottom: 30px;
-      }
-      /* Botón de WhatsApp */
-      .whatsapp-btn {
-        text-decoration: none;
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 120px;
-        right: 30px;
-        background-color: #25d366;
-        color: white;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        animation: pulse 2s infinite;
-      }
-
-      .whatsapp-btn:hover {
-        background-color: #128c7e;
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        color: white;
-      }
-
-      /* Animación de pulso */
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-        }
-        70% {
-          box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-        }
-      }
-      /* Fin boton de whatsapp */
-    </style>
   </head>
 
   <body>
@@ -202,7 +50,6 @@
     >
       <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- End whatsapp button -->
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
@@ -217,13 +64,12 @@
           </div>
           <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
-              <a class="text-primary px-3" href="">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a class="text-primary px-3" href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a class="text-primary px-3" href="">
+              <a class="text-primary px-3" href="#"></a>
+              <a
+                class="text-primary px-3"
+                href="https://www.linkedin.com/in/francisco-contreras-01b49419a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+              >
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a
@@ -233,7 +79,11 @@
               >
                 <i class="fab fa-instagram"></i>
               </a>
-              <a class="text-primary pl-3" href="">
+              <a
+                class="text-primary pl-3"
+                href="https://youtube.com/@abogo.asesorialegal?si=z1u47zcEpfppQ6YJ"
+                target="_blank"
+              >
                 <i class="fab fa-youtube"></i>
               </a>
             </div>
@@ -252,7 +102,7 @@
         <nav
           class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
         >
-          <a href="" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <h1 class="m-0 text-primary">
               <span class="text-dark">ABO</span>GO
             </h1>
@@ -270,8 +120,7 @@
             id="navbarCollapse"
           >
             <div class="navbar-nav ml-auto py-0">
-              <a href="index.html" class="nav-item nav-link active">Inicio</a>
-              <!-- <a href="about.html" class="nav-item nav-link">Quienes Somos</a> -->
+              <a href="index.html" class="nav-item nav-link">Inicio</a>
 
               <div class="nav-item dropdown">
                 <a
@@ -279,8 +128,7 @@
                   class="nav-link dropdown-toggle"
                   data-toggle="dropdown"
                 >
-                  Materia<br />
-                  Laboral
+                  Materia <br />Laboral
                 </a>
                 <div class="dropdown-menu">
                   <a href="accident.html" class="dropdown-item"
@@ -298,14 +146,17 @@
                   <a href="tutela.html" class="dropdown-item">Tutela laboral</a>
                 </div>
               </div>
-              <!-- <a href="laboral.html" class="nav-item nav-link">Laboral</a> -->
+              <a href="peritaje.html" class="nav-item nav-link"
+                >Perito Laboral</a
+              >
               <div class="nav-item dropdown">
                 <a
                   href="#"
                   class="nav-link dropdown-toggle"
                   data-toggle="dropdown"
                 >
-                  Materia de <br />Familia
+                  Materia de<br />
+                  Familia
                 </a>
                 <div class="dropdown-menu">
                   <a href="solicitudp.html" class="dropdown-item"
@@ -340,19 +191,15 @@
                   >
                 </div>
               </div>
-              <!-- <a href="familia.html" class="nav-item nav-link">Familia</a> -->
 
-              <a href="civil.html   " class="nav-item nav-link"
-                >Materia Civil</a
-              >
+              <a href="civil.html" class="nav-item nav-link">Materia Civil</a>
               <a href="otrasmaterias.html" class="nav-item nav-link"
                 >Otras Materias</a
               >
-              <a href="preguntas.html" class="nav-item nav-link"
+              <a href="preguntas.html" class="nav-item nav-link active"
                 >Preguntas Frecuentes</a
               >
               <a href="contact.html" class="nav-item nav-link">Contacto</a>
-              <!-- Menú desplegable de Servicios CORREGIDO -->
             </div>
           </div>
         </nav>
@@ -360,7 +207,7 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Header Start -->
+    <!-- Page Header Start -->
     <div class="container-fluid page-header">
       <div class="container">
         <div
@@ -380,72 +227,79 @@
         </div>
       </div>
     </div>
-    <!-- Header End -->
+    <!-- Page Header End -->
 
     <!-- Booking Start -->
-    <div class="container-fluid booking mt-5 pb-5 px-0">
+    <div class="container-fluid booking mt-5 pb-5 px-0 d-none d-md-block">
       <div class="container pb-5">
         <div class="row justify-content-center">
           <div class="col-12">
             <div class="bg-light shadow" style="padding: 30px 20px">
               <div class="row align-items-center" style="min-height: 60px">
                 <div class="col-12">
-                  <div class="row justify-content-center">
-                    <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="nombre"
-                          placeholder="Ingresa tu nombre"
-                          required
+                  <form action="https://formspree.io/f/xnjkapvl" method="POST">
+                    <div class="row justify-content-center">
+                      <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="nombre"
+                            id="nombre"
+                            placeholder="Ingresa tu nombre"
+                            required
+                            style="height: 47px"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            id="correo"
+                            placeholder="Ingresa tu correo"
+                            required
+                            style="height: 47px"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <select class="form-control" style="height: 47px" name="subject">
+                            <option selected value="">Especialidad</option>
+                            <option value="Familiar">Familiar</option>
+                            <option value="Laboral">Laboral</option>
+                            <option value="Civil">Civil</option>
+                            <option value="Otra Materia">Otra Materia</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
+                        <div class="mb-3 mb-md-0">
+                          <input
+                            type="tel"
+                            class="form-control"
+                            name="telefono"
+                            id="telefono"
+                            placeholder="+569"
+                            required
+                            style="height: 47px"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-sm-12 mt-3 mt-md-0">
+                        <button
+                          class="btn btn-primary btn-block"
+                          type="submit"
                           style="height: 47px"
-                        />
+                        >
+                          Enviar
+                        </button>
                       </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="correo"
-                          placeholder="Ingresa tu correo"
-                          required
-                          style="height: 47px"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <select class="form-control" style="height: 47px">
-                          <option selected>Especialidad</option>
-                          <option value="1">Familiar</option>
-                          <option value="2">Laboral</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 mb-3 mb-md-0">
-                      <div class="mb-3 mb-md-0">
-                        <input
-                          type="tel"
-                          class="form-control"
-                          id="telefono"
-                          placeholder="+569"
-                          required
-                          style="height: 47px"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12 mt-3 mt-md-0">
-                      <button
-                        class="btn btn-primary btn-block"
-                        type="submit"
-                        style="height: 47px"
-                      >
-                        Enviar
-                      </button>
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -455,16 +309,13 @@
     </div>
     <!-- Booking End -->
 
-    <!-- start preguntas frecuentes -->
+    <!-- CONTENIDO ÚNICO - Preguntas Frecuentes -->
     <div class="faq-container">
-      <h2>Preguntas Frecuentes Laboral</h2>
+      <h2 class="faq-title">Preguntas Frecuentes Laboral</h2>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span
-            >¿Si tengo un accidente del trabajo o enfermedad laboral puedo
-            demandar a la empresa?</span
-          >
+          <span>¿Si tengo un accidente del trabajo o enfermedad laboral puedo demandar a la empresa?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -473,19 +324,15 @@
             empleador no tomó todas las medidas de seguridad para dar cuidado a
             la vida y salud de los trabajadores, según lo dispuesto en el Código
             del Trabajo, como la ley 16.744 que<span style="font-weight: bold">
-              “ESTABLECE NORMAS SOBRE ACCIDENTES DEL TRABAJO Y ENFERMEDADES
-              PROFESIONALES”.
-            </span>
+              "ESTABLECE NORMAS SOBRE ACCIDENTES DEL TRABAJO Y ENFERMEDADES
+              PROFESIONALES".</span>
           </p>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span
-            >¿Qué puede suceder para la empresa cuando ocurre un accidente
-            laboral o enfermedad profesional?</span
-          >
+          <span>¿Qué puede suceder para la empresa cuando ocurre un accidente laboral o enfermedad profesional?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -503,10 +350,7 @@
 
       <div class="faq-item">
         <div class="faq-question">
-          <span
-            >¿Cuáles son los requisitos para interponer una demanda
-            laboral?</span
-          >
+          <span>¿Cuáles son los requisitos para interponer una demanda laboral?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -522,10 +366,7 @@
 
       <div class="faq-item">
         <div class="faq-question">
-          <span
-            >¿Que se necesita para interponer una demanda por despido
-            injustificado?</span
-          >
+          <span>¿Que se necesita para interponer una demanda por despido injustificado?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -553,9 +394,11 @@
           </p>
         </div>
       </div>
+
       <br />
       <br />
-      <h2>Preguntas Frecuentes Familia</h2>
+      <h2 class="faq-title">Preguntas Frecuentes Familia</h2>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Qué es la pensión de alimentos?</span>
@@ -573,6 +416,7 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Hasta que edad se paga pensión de alimentos?</span>
@@ -588,6 +432,7 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Quién puede demandar por pensión de alimentos? </span>
@@ -607,6 +452,7 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Qué es el divorcio unilateral? </span>
@@ -623,6 +469,7 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Qué es un divorcio bilateral? </span>
@@ -639,11 +486,10 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
-          <span
-            >¿Cómo se logra la autorización de un menor para salir del país?
-          </span>
+          <span>¿Cómo se logra la autorización de un menor para salir del país?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -659,14 +505,14 @@
           </p>
         </div>
       </div>
+
       <br />
       <br />
-      <h2>PREGUNTAS FRECUENTES CIVIL:</h2>
+      <h2 class="faq-title">PREGUNTAS FRECUENTES CIVIL:</h2>
+
       <div class="faq-item">
         <div class="faq-question">
-          <span
-            >¿Cómo lograr regularizar un bien inmueble ante Bienes Nacionales?
-          </span>
+          <span>¿Cómo lograr regularizar un bien inmueble ante Bienes Nacionales?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
@@ -680,6 +526,7 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Para que sirve la posesión efectiva? </span>
@@ -687,7 +534,7 @@
         </div>
         <div class="faq-answer">
           <p>
-            sirve para que los herederos puedan disponer legalmente de los
+            Sirve para que los herederos puedan disponer legalmente de los
             bienes de una persona fallecida, como casas, autos o dinero. Es un
             trámite necesario para poder inscribir, vender, arrendar o dividir
             los activos de la herencia. Este proceso determina oficialmente
@@ -696,6 +543,7 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Quién puede solicitar la posesión efectiva? </span>
@@ -712,6 +560,7 @@
           </p>
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-question">
           <span>¿Existe un plazo para realizar la posesión efectiva? </span>
@@ -730,267 +579,7 @@
         </div>
       </div>
     </div>
-
-    <!-- end preguntas frecuentes -->
-
-    <!-- Blog Start -->
-    <!-- <div class="container-fluid py-5">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="row pb-3 justify-content-center">
-              <div class="col-lg-6 col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative text-center">
-                    <iframe
-                      class="img-fluid w-100"
-                      src="https://www.youtube.com/embed/sa1ZVByX3jo"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="
-                        accelerometer;
-                        clipboard-write;
-                        encrypted-media;
-                        gyroscope;
-                        picture-in-picture;
-                        web-share;
-                      "
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      style="height: 250px"
-                    ></iframe>
-                  </div>
-                  <div class="bg-white p-4 text-center">
-                    <div class="d-flex mb-2 justify-content-center">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Abogado</a
-                      >
-                      <span class="text-primary px-2">|</span>
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Derecho Familiar</a
-                      >
-                    </div>
-                    <a class="h5 m-0 text-decoration-none" href=""
-                      >¿Cuánto tiempo dura un proceso de divorcio?</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative text-center">
-                    <iframe
-                      class="img-fluid w-100"
-                      src="https://www.youtube.com/embed/sa1ZVByX3jo"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="
-                        accelerometer;
-                        clipboard-write;
-                        encrypted-media;
-                        gyroscope;
-                        picture-in-picture;
-                        web-share;
-                      "
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      style="height: 250px"
-                    ></iframe>
-                  </div>
-                  <div class="bg-white p-4 text-center">
-                    <div class="d-flex mb-2 justify-content-center">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Abogado</a
-                      >
-                      <span class="text-primary px-2">|</span>
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Derecho Laboral</a
-                      >
-                    </div>
-                    <a class="h5 m-0 text-decoration-none" href=""
-                      >¿Puedo ser despedido sin justa causa?</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative text-center">
-                    <iframe
-                      class="img-fluid w-100"
-                      src="https://www.youtube.com/embed/sa1ZVByX3jo"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="
-                        accelerometer;
-                        clipboard-write;
-                        encrypted-media;
-                        gyroscope;
-                        picture-in-picture;
-                        web-share;
-                      "
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      style="height: 250px"
-                    ></iframe>
-                  </div>
-                  <div class="bg-white p-4 text-center">
-                    <div class="d-flex mb-2 justify-content-center">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Abogado</a
-                      >
-                      <span class="text-primary px-2">|</span>
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Derecho Civil</a
-                      >
-                    </div>
-                    <a class="h5 m-0 text-decoration-none" href=""
-                      >¿Qué derechos tengo como arrendatario?</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative text-center">
-                    <iframe
-                      class="img-fluid w-100"
-                      src="https://www.youtube.com/embed/sa1ZVByX3jo"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="
-                        accelerometer;
-                        clipboard-write;
-                        encrypted-media;
-                        gyroscope;
-                        picture-in-picture;
-                        web-share;
-                      "
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      style="height: 250px"
-                    ></iframe>
-                  </div>
-                  <div class="bg-white p-4 text-center">
-                    <div class="d-flex mb-2 justify-content-center">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Abogado</a
-                      >
-                      <span class="text-primary px-2">|</span>
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Derecho Familiar</a
-                      >
-                    </div>
-                    <a class="h5 m-0 text-decoration-none" href=""
-                      >¿Cómo funciona la pensión de alimentos?</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative text-center">
-                    <iframe
-                      class="img-fluid w-100"
-                      src="https://www.youtube.com/embed/sa1ZVByX3jo"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="
-                        accelerometer;
-                        clipboard-write;
-                        encrypted-media;
-                        gyroscope;
-                        picture-in-picture;
-                        web-share;
-                      "
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      style="height: 250px"
-                    ></iframe>
-                  </div>
-                  <div class="bg-white p-4 text-center">
-                    <div class="d-flex mb-2 justify-content-center">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Abogado</a
-                      >
-                      <span class="text-primary px-2">|</span>
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Derecho Civil</a
-                      >
-                    </div>
-                    <a class="h5 m-0 text-decoration-none" href=""
-                      >¿Qué hacer en un accidente de tránsito?</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative text-center">
-                    <iframe
-                      class="img-fluid w-100"
-                      src="https://www.youtube.com/embed/sa1ZVByX3jo"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="
-                        accelerometer;
-                        clipboard-write;
-                        encrypted-media;
-                        gyroscope;
-                        picture-in-picture;
-                        web-share;
-                      "
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      style="height: 250px"
-                    ></iframe>
-                  </div>
-                  <div class="bg-white p-4 text-center">
-                    <div class="d-flex mb-2 justify-content-center">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Abogado</a
-                      >
-                      <span class="text-primary px-2">|</span>
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Derecho Laboral</a
-                      >
-                    </div>
-                    <a class="h5 m-0 text-decoration-none" href=""
-                      >¿Cuáles son mis derechos laborales básicos?</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Blog End -->
+    <!-- FIN CONTENIDO ÚNICO -->
 
     <!-- Footer Start -->
     <div
@@ -1000,14 +589,14 @@
       <div class="container pt-5">
         <div class="row justify-content-center">
           <div class="col-lg-3 col-md-6 mb-5">
-            <a href="" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
               <h1 class="text-primary">
                 <span class="text-white">ABO</span>GO
               </h1>
             </a>
-            <p>
-              Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet
-              labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor
+            <p class="text-justify">
+              Valoramos la comunicación transparente, los tiempos reales y el
+              compromiso con nuestros clientes.
             </p>
             <h6
               class="text-white text-uppercase mt-4 mb-3"
@@ -1016,13 +605,16 @@
               Síguenos
             </h6>
             <div class="d-flex justify-content-start">
-              <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                ><i class="fab fa-twitter"></i
+              <a
+                class="btn btn-outline-primary btn-square mr-2"
+                href="https://youtube.com/@abogo.asesorialegal?si=z1u47zcEpfppQ6YJ"
+                target="_blank"
+                ><i class="fa-brands fa-square-youtube"></i
               ></a>
-              <a class="btn btn-outline-primary btn-square mr-2" href="#"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-outline-primary btn-square mr-2" href="#"
+              <a
+                class="btn btn-outline-primary btn-square mr-2"
+                href="https://www.linkedin.com/in/francisco-contreras-01b49419a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
               <a
@@ -1042,20 +634,29 @@
               Enlaces
             </h5>
             <div class="d-flex flex-column justify-content-start">
-              <a class="text-white-50 mb-2" href="#"
+              <a class="text-white-50 mb-2" href="index.html"
                 ><i class="fa fa-angle-right mr-2"></i>Inicio</a
               >
               <a class="text-white-50 mb-2" href="#"
-                ><i class="fa fa-angle-right mr-2"></i>Quienes Somos</a
+                ><i class="fa fa-angle-right mr-2"></i>Materia Laboral</a
+              >
+              <a class="text-white-50 mb-2" href="peritaje.html"
+                ><i class="fa fa-angle-right mr-2"></i>Perito Laboral</a
               >
               <a class="text-white-50 mb-2" href="#"
-                ><i class="fa fa-angle-right mr-2"></i>Servicios</a
+                ><i class="fa fa-angle-right mr-2"></i>Materia de Familia</a
+              >
+              <a class="text-white-50 mb-2" href="civil.html"
+                ><i class="fa fa-angle-right mr-2"></i>Materia Civil</a
+              >
+              <a class="text-white-50 mb-2" href="otrasmaterias.html"
+                ><i class="fa fa-angle-right mr-2"></i>Otras Materias</a
+              >
+              <a class="text-white-50 mb-2" href="preguntas.html"
+                ><i class="fa fa-angle-right mr-2"></i>Preguntas Frecuentes</a
               >
               <a class="text-white-50 mb-2" href="contact.html"
                 ><i class="fa fa-angle-right mr-2"></i>Contacto</a
-              >
-              <a class="text-white-50 mb-2" href="#"
-                ><i class="fa fa-angle-right mr-2"></i>Preguntas frecuentes</a
               >
             </div>
           </div>
@@ -1066,9 +667,8 @@
             >
               Contacto
             </h5>
-            <p><i class="fa fa-map-marker-alt mr-2"></i>siempre viva</p>
             <p><i class="fa fa-phone-alt mr-2"></i>+56 9 3613 3046</p>
-            <p><i class="fa fa-envelope mr-2"></i>info@abogo.com</p>
+            <p><i class="fa fa-envelope mr-2"></i>info@abogo.cl</p>
           </div>
         </div>
       </div>
@@ -1089,37 +689,8 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- preguntas Javascript -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqQuestions = document.querySelectorAll(".faq-question");
-
-        faqQuestions.forEach((question) => {
-          question.addEventListener("click", function () {
-            const answer = this.nextElementSibling;
-            const icon = this.querySelector(".faq-icon");
-
-            // Cerrar todas las demás respuestas
-            document.querySelectorAll(".faq-answer").forEach((otherAnswer) => {
-              if (otherAnswer !== answer) {
-                otherAnswer.classList.remove("active");
-                otherAnswer.previousElementSibling
-                  .querySelector(".faq-icon")
-                  .classList.remove("rotated");
-              }
-            });
-
-            // Alternar la respuesta actual
-            answer.classList.toggle("active");
-            icon.classList.toggle("rotated");
-          });
-        });
-      });
-    </script>
+    <!-- Custom Javascript -->
+    <script src="js/index.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

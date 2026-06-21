@@ -9768,3 +9768,356 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+/* ============================================ */
+/* SOBRESCRITURA DE BOOTSTRAP                    */
+/* ============================================ */
+
+.btn-primary,
+.bg-primary {
+  background-color: #2d4f2b !important;
+  border-color: #2d4f2b !important;
+}
+
+.text-primary {
+  color: #2d4f2b !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1f371d !important;
+  border-color: #172a16 !important;
+}
+
+.btn-outline-primary {
+  color: #2d4f2b !important;
+  border-color: #2d4f2b !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2d4f2b !important;
+  border-color: #2d4f2b !important;
+  color: #fff !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: #2d4f2b !important;
+}
+
+.btn-primary i,
+.bg-primary i {
+  color: inherit !important;
+}
+
+.custom-select:focus {
+  border-color: #2d4f2b !important;
+  box-shadow: 0 0 0 0.2rem rgba(45, 79, 43, 0.25) !important;
+}
+
+a:hover {
+  color: #2d4f2b !important;
+}
+
+.border-top {
+  border-top-color: rgba(45, 79, 43, 0.1) !important;
+}
+
+/* ============================================ */
+/* BOTÓN DE WHATSAPP                            */
+/* ============================================ */
+
+.whatsapp-btn {
+  text-decoration: none;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 120px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* ============================================ */
+/* PREGUNTAS FRECUENTES                         */
+/* ============================================ */
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  background-color: #2d4f2b;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.faq-question:hover {
+  background-color: #1f371d;
+}
+
+.faq-answer {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.faq-answer.active {
+  padding: 20px;
+  max-height: 500px;
+}
+
+.faq-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.rotated {
+  transform: rotate(45deg);
+}
+
+.faq-title {
+  text-align: center;
+  color: #2d4f2b;
+  margin-bottom: 30px;
+}
+
+/* ============================================ */
+/* DROPDOWN                                     */
+/* ============================================ */
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #2d4f2b !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item:focus {
+  background-color: #2d4f2b !important;
+  color: #ffffff !important;
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #eee !important;
+  }
+
+  .dropdown-item:hover {
+    background-color: #2d4f2b !important;
+    color: #ffffff !important;
+  }
+}
+
+/* ============================================ */
+/* TESTIMONIOS CON ACORDEÓN                     */
+/* ============================================ */
+
+.testimonials-section {
+  background-color: #f8f9fa;
+}
+
+.testimonials-section .section-title {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.testimonials-section .section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #2d4f2b;
+  border-radius: 2px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px 20px 10px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #2d4f2b;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(45, 79, 43, 0.15);
+}
+
+.testimonial-text-wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  font-style: italic;
+  margin: 0 0 5px 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  max-height: 80px;
+}
+
+.testimonial-text.expanded {
+  max-height: 1000px;
+}
+
+.testimonial-text::before {
+  content: '"';
+  font-size: 1.8rem;
+  color: #2d4f2b;
+  opacity: 0.5;
+  margin-right: 5px;
+  font-family: Georgia, serif;
+}
+
+.testimonial-text::after {
+  content: '"';
+  font-size: 1.8rem;
+  color: #2d4f2b;
+  opacity: 0.5;
+  margin-left: 5px;
+  font-family: Georgia, serif;
+}
+
+.testimonial-toggle-btn {
+  background: none;
+  border: none;
+  color: #2d4f2b;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 8px 0 4px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.testimonial-toggle-btn:hover {
+  color: #1f371d;
+}
+
+.testimonial-toggle-btn i {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-toggle-btn i.rotated {
+  transform: rotate(180deg);
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #2d4f2b;
+  font-size: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: 8px;
+  text-align: right;
+}
+
+.testimonial-author i {
+  margin-right: 8px;
+  color: #2d4f2b;
+  opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+  .testimonial-card {
+    padding: 18px 15px 8px 15px;
+  }
+  .testimonial-text {
+    font-size: 0.9rem;
+    max-height: 70px;
+  }
+  .testimonial-text.expanded {
+    max-height: 1000px;
+  }
+}

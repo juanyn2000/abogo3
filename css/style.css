@@ -2920,3 +2920,89 @@ a:hover {
   min-height: 400px;
 }
 
+/* ==========================================================================
+   ABOGO - PERSONALIZACIONES DE LA BARRA LATERAL (SIDEBAR)
+   ========================================================================== */
+
+/* Transición suave para ambos botones al hacer hover */
+.btn-whatsapp-custom, 
+.btn-contacto-custom {
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Efecto Hover para el Botón de WhatsApp (Pasa de Sólido a Outline) */
+.btn-whatsapp-custom:hover {
+    background-color: transparent !important;
+    /* NOTA: Si el color dorado/azul/primario de tu logo es diferente a #17a2b8, 
+       reemplaza este código hexadecimal por el tuyo exacto */
+    color: #1f371d !important; 
+    border: 1px solid #1f371d !important;
+}
+
+/* El botón de contacto (.btn-contacto-custom) ya usa la clase nativa 
+   .btn-outline-primary de Bootstrap 4, la cual gestiona automáticamente 
+   la inversión inversa (pasa de Outline a Sólido) de forma simétrica. */
+
+
+   /* ==========================================================================
+   ABOGO - ESTILOS PARA SECCIÓN DE DESPIDOS Y RECARGOS
+   ========================================================================== */
+
+.recargo-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recargo-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.recargo-badge {
+    font-size: 1rem;
+    padding: 6px 12px;
+    margin-right: 12px;
+    background-color: #1f371d !important; /* El color verde oscuro de la plantilla */
+    color: #ffffff;
+    border-radius: 4px;
+    min-width: 65px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   ABOGO - ESTILOS ADICIONALES PARA AUTO DESPIDO
+   ========================================================================== */
+
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.check-list li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.check-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #1f371d; /* Color verde oscuro */
+}
+
+/* Reutilizamos el estilo de recargo-badge creado anteriormente */
+.recargo-badge {
+    font-size: 1rem;
+    padding: 6px 12px;
+    margin-right: 12px;
+    background-color: #1f371d !important;
+    color: #ffffff;
+    border-radius: 4px;
+    min-width: 65px;
+    text-align: center;
+    display: inline-block;
+}

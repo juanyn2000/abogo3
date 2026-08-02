@@ -1541,3 +1541,17 @@ border-radius:4px;
         text-align: center !important;
     }
 }
+
+.testimonials-section .row {
+  justify-content: center;
+}
+
+.testimonials-section [class*="col-"] {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-section .testimonial-card {
+  width: 100%;
+  max-width: 350px;
+}
